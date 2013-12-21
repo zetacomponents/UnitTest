@@ -84,7 +84,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
      * @return bool
      * @abstract
      */
-    public function evaluate( $other )
+    public function evaluate( $other, $description = '', $returnResult = false )
     {
         if ( !is_string( $other ) ||
              !is_file( $other ) ||
@@ -154,7 +154,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
      * @param   boolean $not Flag to indicate negation.
      * @throws  PHPUnit_Framework_ExpectationFailedException
      */
-    public function fail( $other, $description, $not = false )
+    public function fail( $other, $description, PHPUnit_Framework_ComparisonFailure $comparisonFailure = NULL )
     {
         $failureDescription = sprintf(
           'Failed asserting that image "%s" is similar to image "%s".',
