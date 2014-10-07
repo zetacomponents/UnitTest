@@ -155,7 +155,7 @@ class ezcTestRegressionTest extends ezcTestCase
 
     public static function suite()
     {
-        return new ezcMvcRegressionSuite( __CLASS__ );
+        return new PHPUnit_Framework_TestSuite( __CLASS__ );
     }
 }
 ?>
