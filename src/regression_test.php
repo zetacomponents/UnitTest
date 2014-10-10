@@ -29,7 +29,7 @@
  * @package Feed
  * @subpackage Tests
  */
-class ezcTestRegressionTest extends ezcTestCase
+abstract class ezcTestRegressionTest extends ezcTestCase
 {
     /**
      * How to sort the test files: 'mtime' sorts by modification time, any other
@@ -155,7 +155,7 @@ class ezcTestRegressionTest extends ezcTestCase
 
     public static function suite()
     {
-        return new ezcMvcRegressionSuite( __CLASS__ );
+        return new PHPUnit_Framework_TestSuite( __CLASS__ );
     }
 }
 ?>
