@@ -154,36 +154,22 @@ class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
      * @param   boolean $not Flag to indicate negation.
      * @throws  PHPUnit_Framework_ExpectationFailedException
      */
-    public function fail( $other, $description, PHPUnit_Framework_ComparisonFailure $comparisonFailure = NULL )
+    public function fail( $other, $description, SebastianBergmann\Comparator\ComparisonFailure  $comparisonFailure = NULL )
     {
         $failureDescription = sprintf(
           'Failed asserting that image "%s" is similar to image "%s".',
-
            $other,
            $this->filename
         );
-
-        if ($not) {
-            $failureDescription = self::negate($failureDescription);
-        }
 
         if (!empty($description)) {
             $failureDescription = $description . "\n" . $failureDescription;
         }
 
-        if (!$not) {
-            throw new PHPUnit_Framework_ExpectationFailedException(
-              $failureDescription,
-              PHPUnit_Framework_ComparisonFailure::diffEqual(
-                $this->delta,
-                $this->difference
-              )
-            );
-        } else {
-            throw new PHPUnit_Framework_ExpectationFailedException(
-              $failureDescription
-            );
-        }
+        throw new PHPUnit_Framework_ExpectationFailedException(
+          $failureDescription,
+          $comparisonFailure
+        );
     }
 
     /**
