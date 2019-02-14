@@ -30,7 +30,7 @@
  * @package UnitTest
  * @version //autogentag//
  */
-class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
+class ezcTestConstraintSimilarImage extends PHPUnit\Framework\Constraint
 {
     /**
      * Filename of the image to compare against.
@@ -152,7 +152,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
      * @param   string  $description A string with extra description of what was
      *                               going on while the evaluation failed.
      * @param   boolean $not Flag to indicate negation.
-     * @throws  PHPUnit_Framework_ExpectationFailedException
+     * @throws  PHPUnit\Framework\ExpectationFailedException
      */
     public function fail( $other, $description, SebastianBergmann\Comparator\ComparisonFailure  $comparisonFailure = NULL )
     {
@@ -166,7 +166,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
             $failureDescription = $description . "\n" . $failureDescription;
         }
 
-        throw new PHPUnit_Framework_ExpectationFailedException(
+        throw new PHPUnit\Framework\ExpectationFailedException(
           $failureDescription,
           $comparisonFailure
         );
