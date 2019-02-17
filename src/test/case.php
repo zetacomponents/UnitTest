@@ -30,7 +30,7 @@
  * @package UnitTest
  * @version //autogentag//
  */
-abstract class ezcTestCase extends PHPUnit_Framework_TestCase
+abstract class ezcTestCase extends PHPUnit\Framework\TestCase
 {
     /**
      * Do not mess with the temp dir, otherwise the removeTempDirectory might

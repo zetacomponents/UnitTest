@@ -27,7 +27,7 @@
 /**
  * @package UnitTest
  */
-class ezcTestRegressionSuite extends PHPUnit_Framework_TestSuite
+class ezcTestRegressionSuite extends PHPUnit\Framework\TestSuite
 {
     public function __construct( $theClass = '', $name = '' )
     {
@@ -77,7 +77,7 @@ class ezcTestRegressionSuite extends PHPUnit_Framework_TestSuite
              !$constructor->isPublic() )
         {
             $this->addTest(
-                new PHPUnit_Framework_Warning(
+                new PHPUnit\Framework\Warning(
                     sprintf(
                         'Class "%s" has no public constructor.',
                         $theClass->getName()
@@ -94,7 +94,7 @@ class ezcTestRegressionSuite extends PHPUnit_Framework_TestSuite
              && !$theClass->isSubclassOf( 'ezcTestRegressionTest' ) )
         {
             $this->addTest(
-                new PHPUnit_Framework_Warning(
+                new PHPUnit\Framework\Warning(
                     sprintf(
                         'Class "%s" is not a subclass of ezcTestRegressionTest.',
                         $theClass->getName()
@@ -115,7 +115,7 @@ class ezcTestRegressionSuite extends PHPUnit_Framework_TestSuite
         if ( empty( $tests ) )
         {
             $this->addTest(
-                new PHPUnit_Framework_Warning(
+                new PHPUnit\Framework\Warning(
                     sprintf(
                         'No regression tests found in class "%s".',
                         $theClass->getName()

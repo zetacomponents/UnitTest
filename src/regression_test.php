@@ -129,7 +129,7 @@ abstract class ezcTestRegressionTest extends ezcTestCase
     {
         if ( $this->currentFile === false )
         {
-            throw new PHPUnit_Framework_ExpectationFailedException( "No currentFile set for test " . __CLASS__ );
+            throw new PHPUnit\Framework\ExpectationFailedException( "No currentFile set for test " . __CLASS__ );
         }
 
         $exception = null;
@@ -155,7 +155,7 @@ abstract class ezcTestRegressionTest extends ezcTestCase
 
     public static function suite()
     {
-        return new PHPUnit_Framework_TestSuite( __CLASS__ );
+        return new PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 }
 ?>
