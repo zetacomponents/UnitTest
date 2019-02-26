@@ -38,7 +38,7 @@
     },
     "description": "zetacomponents/unit-test Component",
     "homepage": "https://github.com/zetacomponents",
-    "license": "apache2",
+    "license": "Apache-2.0",
     "name": "zetacomponents/unit-test",
     "type": "library",
     "require": {
