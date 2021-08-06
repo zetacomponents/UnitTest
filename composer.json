@@ -42,6 +42,6 @@
     "name": "zetacomponents/unit-test",
     "type": "library",
     "require": {
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^8.0"
     }
 }
