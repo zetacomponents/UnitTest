@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -79,7 +79,7 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
      */
     public function removeTempDir()
     {
-        if ( file_exists( $this->tempDir ) )
+        if ( $this->tempDir && file_exists( $this->tempDir ) )
         {
             $this->removeRecursively( $this->tempDir );
         }
@@ -89,9 +89,9 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
     {
         if ( is_dir( $this->tempDir ) )
         {
-            if ( $dh = opendir( $this->tempDir ) ) 
+            if ( $dh = opendir( $this->tempDir ) )
             {
-                while ( ( $file = readdir( $dh ) ) !== false ) 
+                while ( ( $file = readdir( $dh ) ) !== false )
                 {
                     if ( $file[0] != "." )
                     {
