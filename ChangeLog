@@ -1,3 +1,10 @@
+1.1.5 - Friday 21 January 2022
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Test whether the temporary directory for cleaning up temp files is actually
+  set before using it.
+
+
 1.1.4 - Friday 21 January 2022
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
