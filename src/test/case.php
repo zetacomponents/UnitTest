@@ -171,5 +171,18 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
             $this->fail( "Setting property $propertyName to $value did not fail." );
         }
     }
+
+    /**
+     * Compatibility layer for PHPUnit methods that have changed in naming or
+     * behavior slightly across versions
+     */
+    public function __call( $method, $arguments )
+    {
+        if ( $method === 'getMock' ) {
+            return $this->getMockBuilder( $arguments[0] )->setMethods( $arguments[1] ?? [] )->getMock();
+        }
+
+        throw BadMethodCallException( $method . ' does not exist.' );
+    }
 }
 ?>
