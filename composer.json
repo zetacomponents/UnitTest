@@ -43,5 +43,13 @@
     "type": "library",
     "require": {
         "phpunit/phpunit": "^8.0"
+    },
+    "require-dev": {
+        "zetacomponents/coding-standard": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
