@@ -102,7 +102,6 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
         }
     }
 
-
     private function removeRecursively( $entry )
     {
         if ( is_file( $entry ) || is_link( $entry ) )
@@ -178,7 +177,8 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
      */
     public function __call( $method, $arguments )
     {
-        if ( $method === 'getMock' ) {
+        if ( $method === 'getMock' )
+        {
             return $this->getMockBuilder( $arguments[0] )->setMethods( $arguments[1] ?? [] )->getMock();
         }
 
