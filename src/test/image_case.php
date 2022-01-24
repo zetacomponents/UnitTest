@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -37,7 +37,7 @@ abstract class ezcTestImageCase extends ezcTestCase
      *
      * Uses the compare binary of the imagemagick package to compare to images
      * and will fail if the difference between two images is higher then zero.
-     * 
+     *
      * @param string $image New image
      * @param string $expectedImage Image to compare with
      * @param string $message Message to append to the fail message
@@ -48,7 +48,8 @@ abstract class ezcTestImageCase extends ezcTestCase
     {
         $constraint = new ezcTestConstraintSimilarImage( $expectedImage );
 
-        if ( ! $constraint->evaluate( $image ) ) {
+        if ( ! $constraint->evaluate( $image ) )
+        {
             self::failConstraint( $constraint, $image, $message );
         }
     }
@@ -60,9 +61,9 @@ abstract class ezcTestImageCase extends ezcTestCase
      * and will fail if the difference between two images is higher then the
      * defined value.
      *
-     * See http://www.imagemagick.org/script/compare.php for details. The 
+     * See http://www.imagemagick.org/script/compare.php for details. The
      * difference is logarithmical scaled.
-     * 
+     *
      * @param string $image New image
      * @param string $expectedImage Image to compare with
      * @param string $message Message to append to the fail message

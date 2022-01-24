@@ -113,14 +113,14 @@ class ezcTestConstraintSimilarImage extends PHPUnit\Framework\Constraint\Constra
         // Read STDERR
         do
         {
-            $errorString .= rtrim( fgets( $pipes[2], 1024) , "\n" );
+            $errorString .= rtrim( fgets( $pipes[2], 1024 ) , "\n" );
         } while ( !feof( $pipes[2] ) );
 
         $resultString = '';
         // Read STDOUT
         do
         {
-            $resultString .= rtrim( fgets( $pipes[1], 1024) , "\n" );
+            $resultString .= rtrim( fgets( $pipes[1], 1024 ) , "\n" );
         }
         while ( !feof( $pipes[1] ) );
 
@@ -128,7 +128,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit\Framework\Constraint\Constra
         $return = proc_close( $imageProcess );
 
         // Some versions output to STDERR
-        if ( empty( $resultString) && !empty( $errorString ) )
+        if ( empty( $resultString ) && !empty( $errorString ) )
         {
             $resultString = $errorString;
         }
@@ -154,21 +154,22 @@ class ezcTestConstraintSimilarImage extends PHPUnit\Framework\Constraint\Constra
      * @param   boolean $not Flag to indicate negation.
      * @throws  PHPUnit\Framework\ExpectationFailedException
      */
-    public function fail( $other, $description, SebastianBergmann\Comparator\ComparisonFailure  $comparisonFailure = NULL ) : void
+    public function fail( $other, $description, SebastianBergmann\Comparator\ComparisonFailure $comparisonFailure = NULL ) : void
     {
         $failureDescription = sprintf(
-          'Failed asserting that image "%s" is similar to image "%s".',
-           $other,
-           $this->filename
+            'Failed asserting that image "%s" is similar to image "%s".',
+            $other,
+            $this->filename
         );
 
-        if (!empty($description)) {
+        if (!empty( $description ))
+        {
             $failureDescription = $description . "\n" . $failureDescription;
         }
 
         throw new PHPUnit\Framework\ExpectationFailedException(
-          $failureDescription,
-          $comparisonFailure
+            $failureDescription,
+            $comparisonFailure
         );
     }
 
@@ -180,8 +181,8 @@ class ezcTestConstraintSimilarImage extends PHPUnit\Framework\Constraint\Constra
     public function toString() : string
     {
         return sprintf(
-          'is similar to "%s"',
-          $this->filename
+            'is similar to "%s"',
+            $this->filename
         );
     }
 }
