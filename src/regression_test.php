@@ -61,7 +61,7 @@ abstract class ezcTestRegressionTest extends ezcTestCase
         parent::__construct();
     }
 
-    public function getName( bool $withDataSet = TRUE )
+    public function getName( bool $withDataSet = TRUE ) : string
     {
         return $this->currentFile;
     }

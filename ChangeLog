@@ -1,4 +1,4 @@
-1.1.6 - Friday 11 February 2022
+1.1.7 - Friday 11 February 2022
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Support for PHP 7+ for regression tests.
