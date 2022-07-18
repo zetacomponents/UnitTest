@@ -192,7 +192,7 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
     {
         $reflectionObject = new ReflectionClass( $object );
         $reflectionProperty = $reflectionObject->getProperty( $attribute );
-        return $reflectionProperty->getValue();
+        return $reflectionProperty->getValue( $object );
     }
 
     /**
