@@ -192,6 +192,11 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
     {
         $reflectionObject = new ReflectionClass( $object );
         $reflectionProperty = $reflectionObject->getProperty( $attribute );
+
+        if (version_compare(PHP_VERSION, '8.1', '<')) {
+            $reflectionProperty->setAccessible( true );
+        }
+
         return $reflectionProperty->getValue( $object );
     }
 
