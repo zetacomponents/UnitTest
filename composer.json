@@ -42,7 +42,7 @@
     "name": "zetacomponents/unit-test",
     "type": "library",
     "require": {
-        "phpunit/phpunit": "^8.0"
+        "phpunit/phpunit": "^9.0"
     },
     "require-dev": {
         "zetacomponents/coding-standard": "^1.0"
