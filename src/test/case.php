@@ -184,5 +184,25 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
 
         throw BadMethodCallException( $method . ' does not exist.' );
     }
+
+    /**
+     * Implementation of readAttribute that PHPUnit dropped
+     */
+    public static function readAttribute( $object, $attribute )
+    {
+        $reflectionObject = new ReflectionClass( $object );
+        $reflectionProperty = $reflectionProperty->getProperty( $attribute );
+        return $reflectionProperty->getValue();
+    }
+
+    /**
+     * Implementation of assertAttributeSame that PHPUnit dropped
+     */
+    public static function assertAttributeSame( $expectedValue, $property, $object )
+    {
+        $actualValue = self::readAttribute( $object, $property );
+
+        return self::assertSame( $actualValue, $expectedValue );
+    }
 }
 ?>
