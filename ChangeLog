@@ -1,3 +1,10 @@
+1.2.4 - Tuesday 19 July 2022
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Fixed the throw of 'BadMethodCallException'. (Remi Collet)
+- Add assertAttributeEquals method that PHPUnit 9 has dropped. (Remi Collet)
+
+
 1.2.3 - Monday 18 July 2022
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
