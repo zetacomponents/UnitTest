@@ -182,7 +182,7 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
             return $this->getMockBuilder( $arguments[0] )->setMethods( $arguments[1] ?? [] )->getMock();
         }
 
-        throw BadMethodCallException( $method . ' does not exist.' );
+        throw new BadMethodCallException( $method . ' does not exist.' );
     }
 
     /**
@@ -209,5 +209,15 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
 
         return self::assertSame( $actualValue, $expectedValue );
     }
+    
+    /**
+     * Implementation of assertAttributeEquals that PHPUnit dropped
+     */
+    public static function assertAttributeEquals( $expectedValue, $property, $object )
+    {
+        $actualValue = self::readAttribute( $object, $property );
+
+        return self::assertEquals( $actualValue, $expectedValue );
+    }  
 }
 ?>
