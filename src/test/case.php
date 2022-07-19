@@ -193,7 +193,8 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
         $reflectionObject = new ReflectionClass( $object );
         $reflectionProperty = $reflectionObject->getProperty( $attribute );
 
-        if (version_compare(PHP_VERSION, '8.1', '<')) {
+        if (version_compare( PHP_VERSION, '8.1', '<' ) )
+        {
             $reflectionProperty->setAccessible( true );
         }
 
@@ -209,7 +210,7 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
 
         return self::assertSame( $actualValue, $expectedValue );
     }
-    
+
     /**
      * Implementation of assertAttributeEquals that PHPUnit dropped
      */
@@ -218,6 +219,6 @@ abstract class ezcTestCase extends PHPUnit\Framework\TestCase
         $actualValue = self::readAttribute( $object, $property );
 
         return self::assertEquals( $actualValue, $expectedValue );
-    }  
+    }
 }
 ?>
