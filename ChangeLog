@@ -1,3 +1,9 @@
+1.2.5 - Tuesday 23 January 2024
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Make 'ezcTestConstraintSimilarImage::evaluate' compatible with newer PHPUnit
+  versions
+
 1.2.4 - Tuesday 19 July 2022
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
