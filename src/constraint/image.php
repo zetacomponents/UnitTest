@@ -84,7 +84,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit\Framework\Constraint\Constra
      * @return bool
      * @abstract
      */
-    public function evaluate( $other, $description = '', $returnResult = false )
+    public function evaluate( $other, $description = '', $returnResult = false ) : ?bool
     {
         if ( !is_string( $other ) ||
              !is_file( $other ) ||
