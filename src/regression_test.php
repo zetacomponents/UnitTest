@@ -39,6 +39,7 @@ abstract class ezcTestRegressionTest extends ezcTestCase
 
     protected $files = array();
     protected $currentFile;
+    private $retryTest;
 
     public function __construct()
     {
